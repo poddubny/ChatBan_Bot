@@ -23,8 +23,8 @@
 			foreach ($data->message->new_chat_members as $user)
 			{
 				$params = [
-					"chat_id" => $data->message->chat->id,
-					"user_id" => $user->id
+					"chat_id"	=> $data->message->chat->id,
+					"user_id"	=> $user->id
 				];
 				performCurl("/restrictChatMember", $params);
 			}
